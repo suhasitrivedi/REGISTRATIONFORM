@@ -21,7 +21,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     var fullName = document.getElementById("fullName").value;
     var email = document.getElementById("email").value;
     var website = document.getElementById("website").value;
-    var imageFile = document.getElementById("image").files[0]; // Get the file object
+    var imageFile = document.getElementById("image").files[0];
 
     var gender = document.querySelector('input[name="gender"]:checked').value;
     

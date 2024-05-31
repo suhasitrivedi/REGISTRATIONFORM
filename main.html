@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <form id="registrationForm">
+            <h2 style="background-color: darkturquoise;text-align: center;">Registration Form</h2>
+            FullName: <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+            Email:<input type="email" id="email" name="email" placeholder="Email" required>
+            Website:<input type="text" id="website" name="website" placeholder="Website">
+           Image:<br> <input type="file" id="image" name="image" accept="image/*" onchange="previewImage(event)">
+            
+            <div><br>
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">other</label>
+            </div>
+            
+            <div><br>
+                <label>Skills:</label><br>
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="skills" value="CSS">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+            </div>
+        <br>
+            <input type="submit" value="Submit"><br><br>
+            <button type="button" onclick="clearForm()">Clear</button>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <h2>student data</h2>
+        <table border="2" >
+            <thead>
+                <tr style="background-color: cornflowerblue; ">
+                    <th>Description</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody">
+              
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="output" id="output"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
